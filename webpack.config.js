@@ -20,6 +20,6 @@ module.exports = {
     inline: true
   },
   resolve: {
-    extensions: ['.js', '.json', '.jsx', '.scss', '.css']
+    extensions: ['*', '.js', '.json', '.jsx', '.css', '.scss']
   }
 }
