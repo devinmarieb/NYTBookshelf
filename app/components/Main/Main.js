@@ -3,7 +3,7 @@ import $ from 'jquery'
 
 import Button from '../Button/Button'
 
-import './main-styles.css'
+import './main-styles.scss'
 
 
 export default class Main extends Component {

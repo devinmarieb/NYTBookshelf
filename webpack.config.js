@@ -8,16 +8,30 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      {
-        test: /\.jsx?/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader!' }
-    ]
-  },
+  rules: [
+    {
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loaders: ['babel-loader'],
+    },
+    {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader',
+      ],
+    },
+    {
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'css-loader?sourceMap',
+        'sass-loader?sourceMap',
+
+      ],
+    },
+  ],
+},
   devServer: {
     contentBase: './build',
     inline: true
