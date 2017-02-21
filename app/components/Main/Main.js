@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import $ from 'jquery'
 import './main-styles.css'
 
-export default class Header extends Component {
-  constructor() {
-    super();
-  }
+export default class Main extends Component {
+  // constructor() {
+  //   super();
+  // }
 
-  componentDidMount() {
-    var url = "https://api.nytimes.com/svc/books/v3/lists.json";
+  componentWillMount() {
+    const {store} = this.props
+    console.log(this.props);
+    var url = "https://api.nytimes.com/svc/books/v3/lists.json"
     url += '?' + $.param({
       'api-key': "d7d1e070d64347eda225f068e97c8d21",
       'list': "hardcover-nonfiction"
@@ -17,15 +19,18 @@ export default class Header extends Component {
       url: url,
       method: 'GET',
     }).done(function(result) {
-      console.log(result);
+      let books = result.results
+      console.log(books);
+      this.props.handleAPI(books)
     }).fail(function(err) {
       throw err;
     });
   }
 
   render(){
-    return (
-      <h1>Main</h1>
+    return(
+      <h1>hi</h1>
     )
   }
+
 }
