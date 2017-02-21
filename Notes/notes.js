@@ -1,3 +1,7 @@
+//GET BOOK PHOTO
+  // http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg
+
+
 //OLD API REQUEST
 
 // componentWillMount() {
@@ -39,5 +43,5 @@
   //childrens-picture-books
   //childrens-series
   //young-adult-hardcover
-  
+
   //advide-how-to-misc
