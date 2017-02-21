@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
 
-// import Button from './Button'
+import Button from '../Button/Button'
 
 import './main-styles.css'
 
@@ -27,8 +27,13 @@ export default class Main extends Component {
     console.log(this.props.bookList);
     return(
       <div>
-        <button onClick={ ()=> this.updateList('hardcover-nonfiction') }>Hardcover NonFiction</button>
-        <button onClick={ ()=> this.updateList('hardcover-fiction') }>Hardcover Fiction</button>
+        <Button name='Hardcover Fiction' className='button' onClick={ ()=> this.updateList('hardcover-fiction') } />
+        <Button name='Paperback Fiction' className='button' onClick={ ()=> this.updateList('trade-fiction-paperback') } />
+        <Button name='E-Book Fiction' className='button' onClick={ ()=> this.updateList('e-book-fiction') } />
+        <Button name='Hardcover NonFiction' className='button' onClick={ ()=> this.updateList('hardcover-nonfiction') } />
+        <Button name='Paperback NonFiction' className='button' onClick={ ()=> this.updateList('paperback-nonfiction') } />
+        <Button name='E-Book NonFiction' className='button' onClick={ ()=> this.updateList('e-book-nonfiction') } />
+        <Button name='Young Adult Hardcover' className='button' onClick={ ()=> this.updateList('young-adult-hardcover') } />
       </div>
     )
   }

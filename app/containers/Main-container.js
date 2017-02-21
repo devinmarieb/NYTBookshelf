@@ -5,11 +5,8 @@ import Main from '../components/Main/Main'
 
 const mapStateToProps = (state) => {
   console.log(state);
-  return {
-    bookList: state.mainReducer.books}
+  return { bookList: state.mainReducer.books }
 }
-
-{/* <App bookList={this.state.books}/> */}
 
 const mapDispatchToProps = (dispatch) => {
   return {
