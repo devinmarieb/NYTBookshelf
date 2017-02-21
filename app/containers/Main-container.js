@@ -4,8 +4,12 @@ import { addBooks } from '../actions'
 import Main from '../components/Main/Main'
 
 const mapStateToProps = (state) => {
-  return state
+  console.log(state);
+  return {
+    bookList: state.mainReducer.books}
 }
+
+{/* <App bookList={this.state.books}/> */}
 
 const mapDispatchToProps = (dispatch) => {
   return {
