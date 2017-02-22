@@ -43,12 +43,13 @@ export default class Main extends Component {
             <article className='individual-book'>
               <div className='book-image-container'>
                 <Button name='&#9733;' className='star-button' />
-                <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" className='book-image' />
+                <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} />
               </div>
               <div className='info-text'>
                 <h1 className='book-title'>{ info.title }</h1>
                 <h2 className='book-author'>{ info.author }</h2>
                 <p className='book-description'>{ info.description }</p>
+                <p>{ info.primary_isbn10 }</p>
               </div>
             </article>
           )
