@@ -26,7 +26,8 @@
 }
 
 .button-clicked {
-  background-color: magenta;
+  background-color: $listHover;
+  color: $darkColor;
 }
 
 .star-button {

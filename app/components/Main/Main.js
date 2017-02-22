@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
 
-import Button from '../Button/Button'
 import Header from '../Header/Header'
+import Button from '../Button/Button'
 
 import './main-styles.scss'
 
@@ -22,16 +22,15 @@ export default class Main extends Component {
       this.props.handleAPI(books)
       // console.log(books);
     })
-    //WIP change button color on click
-    // e.target.classList.toggle('button-clicked')
+    e.target.classList.toggle('button-clicked')
   }
 
   render(){
-    // console.log(this.props.bookList);
+    console.log(this.props.bookList);
     return(
       <section>
 
-        <Header className='header' title='NYT Bookshelf' textClass='nyt-title'/>
+        <Header />
 
         <article className='button-container'>
           <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } />
@@ -43,7 +42,6 @@ export default class Main extends Component {
           <Button name='Young Adult Hardcover' className='button' onClick={ (e)=> this.updateList('young-adult-hardcover', e) } />
           <Button name='&#9733;' className='favorites-button' />
         </article>
-
 
         <section className='bookshelf'>
           <article>
