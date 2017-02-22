@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import $ from 'jquery'
 
 import Button from '../Button/Button'
+import Header from '../Header/Header'
 
 import './main-styles.scss'
 
@@ -25,36 +26,39 @@ export default class Main extends Component {
     // e.target.classList.toggle('button-clicked')
   }
 
-  // getInfo() {
-  //   console.log(this.props.bookList);
-  //   // this.props.bookList.map((book)=> {
-  //   //   return(
-  //   //     <article>
-  //   //       { book.book_details.author }
-  //   //     </article>
-  //   //   )
-  //   // })
-  // }
-
-
-
   render(){
     // console.log(this.props.bookList);
     return(
-      <div>
-        <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } />
-        <Button name='Paperback Fiction' className='button' onClick={ (e)=> this.updateList('trade-fiction-paperback', e) } />
-        <Button name='E-Book Fiction' className='button' onClick={ (e)=> this.updateList('e-book-fiction', e) } />
-        <Button name='Hardcover NonFiction' className='button' onClick={ (e)=> this.updateList('hardcover-nonfiction', e) } />
-        <Button name='Paperback NonFiction' className='button' onClick={ (e)=> this.updateList('paperback-nonfiction', e) } />
-        <Button name='E-Book NonFiction' className='button' onClick={ (e)=> this.updateList('e-book-nonfiction', e) } />
-        <Button name='Young Adult Hardcover' className='button' onClick={ (e)=> this.updateList('young-adult-hardcover', e) } />
+      <section>
 
-        {/* <section>
-          { this.getInfo() }
-        </section> */}
+        <Header className='header' title='NYT Bookshelf' textClass='nyt-title'/>
 
-      </div>
+        <article className='button-container'>
+          <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } />
+          <Button name='Paperback Fiction' className='button' onClick={ (e)=> this.updateList('trade-fiction-paperback', e) } />
+          <Button name='E-Book Fiction' className='button' onClick={ (e)=> this.updateList('e-book-fiction', e) } />
+          <Button name='Hardcover NonFiction' className='button' onClick={ (e)=> this.updateList('hardcover-nonfiction', e) } />
+          <Button name='Paperback NonFiction' className='button' onClick={ (e)=> this.updateList('paperback-nonfiction', e) } />
+          <Button name='E-Book NonFiction' className='button' onClick={ (e)=> this.updateList('e-book-nonfiction', e) } />
+          <Button name='Young Adult Hardcover' className='button' onClick={ (e)=> this.updateList('young-adult-hardcover', e) } />
+          <Button name='&#9733;' className='favorites-button' />
+        </article>
+
+
+        <section className='bookshelf'>
+          <article>
+            <div className='book-image'> <Button name='&#9733;' className='star-button' /> </div>
+            <article className='info-container'>
+              <h1 className='book-title'>Title Test</h1>
+              <h2 className='book-author'>Author Test</h2>
+              <p className='book-description'>Description Test</p>
+            </article>
+          </article>
+        </section>
+
+        <img src='./app/../images/150pxB.png' className='nyt-logo' />
+
+      </section>
     )
   }
 

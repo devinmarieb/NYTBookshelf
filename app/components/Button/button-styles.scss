@@ -1,0 +1,43 @@
+@import './app/variables';
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  @include buttonStyle;
+  font-size: 12px;
+}
+
+.favorites-button {
+  @include buttonStyle;
+  font-size: 24px;
+}
+
+.button:hover {
+  background-color: $listHover;
+  color: $darkColor;
+}
+
+.favorites-button:hover {
+  background-color: $favoritesHover;
+  color: $darkColor;
+}
+
+.button-clicked {
+  background-color: magenta;
+}
+
+.star-button {
+  margin: 3px 0 0 88%;
+  background-color: transparent;
+  font-size: 24px;
+  color: $lightColor;
+  border: none;
+  outline: none;
+}
+
+.star-button:hover {
+  color: $favoritesHover;
+}
