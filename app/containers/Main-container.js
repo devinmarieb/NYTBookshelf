@@ -4,7 +4,7 @@ import { addBooks } from '../actions'
 import Main from '../components/Main/Main'
 
 const mapStateToProps = (state) => {
-  // console.log(state);
+  console.log(state);
   return { bookList: state.mainReducer.books }
 }
 

@@ -22,8 +22,15 @@ export default class Main extends Component {
       this.props.handleAPI(books)
       // console.log(books);
     })
-    e.target.classList.toggle('button-clicked')
+    // this.toggleListTab()
+    // setTimeout(function(){ e.target.classList.add('button-clicked') }, 1000)
   }
+
+  // toggleListTab() {
+  //   debugger
+  //   let buttons = document.querySelectorAll('.button')
+  //   console.log(buttons);
+  // }
 
   render(){
     console.log(this.props.bookList);
@@ -45,7 +52,10 @@ export default class Main extends Component {
 
         <section className='bookshelf'>
           <article>
-            <div className='book-image'> <Button name='&#9733;' className='star-button' /> </div>
+            <div>
+              {/* <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" /> */}
+              <Button name='&#9733;' className='star-button' />
+            </div>
             <article className='info-container'>
               <h1 className='book-title'>Title Test</h1>
               <h2 className='book-author'>Author Test</h2>
@@ -54,7 +64,7 @@ export default class Main extends Component {
           </article>
         </section>
 
-        <img src='./app/../images/150pxB.png' className='nyt-logo' />
+        {/* <img src='./app/../images/150pxB.png' className='nyt-logo' /> */}
 
       </section>
     )
