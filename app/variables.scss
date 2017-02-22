@@ -1,0 +1,18 @@
+$lightColor: #f6f6f6;
+$darkColor: #090f0f;
+$listHover: #ff6666;
+$favoritesHover: #e5c100;
+
+$appTitleFont: 'Cinzel Decorative', cursive;;
+$bookTitleFont: 'Cantata One', serif;
+$bookInfoFont: 'Petrona', serif;
+
+@mixin buttonStyle {
+  flex: 1;
+  height: 75px;
+  font-family: 'Cinzel', serif;
+  background-color: #090f0f;
+  color: #f6f6f6;
+  outline: none;
+  border: none;
+}

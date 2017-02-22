@@ -1,12 +1,46 @@
+@import './app/variables';
+
 body {
-  background-color: yellow;
+  background-color: $lightColor;
 }
 
-.button {
-  background-color: black;
-  color: white;
+.bookshelf {
+  display: flex;
 }
 
-.button-clicked {
-  background-color: magenta;
+.info-container {
+  width: 275px;
+  margin: 0 0 0 30px;
+}
+
+.book-title {
+  font-family: $bookTitleFont;
+  font-size: 32px;
+  color: $darkColor;
+}
+
+.book-author {
+  font-family: $bookInfoFont;
+  font-size: 24px;
+  color: $darkColor;
+}
+
+.book-description {
+  font-family: $bookInfoFont;
+  font-size: 18px;
+  color: $darkColor;
+}
+
+.book-image {
+  display: inline-block;
+  margin: 20px;
+  height: 450px;
+  width: 275px;
+  background-color: $darkColor;
+  color: $lightColor;
+}
+
+.nyt-logo {
+  display: block;
+  margin: 0 0 0 95%;
 }
