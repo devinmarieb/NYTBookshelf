@@ -32,8 +32,25 @@ export default class Main extends Component {
   //   console.log(buttons);
   // }
 
-  render(){
-    console.log(this.props.bookList);
+  render() {
+    let allBooks = this.props.bookList
+    let books
+    if(allBooks)
+    books = allBooks.map((book)=> {
+      return (
+        book.book_details.map((info, i)=> {
+          return(
+            <article>
+              {/* <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" /> */}
+              <h1 className='book-title'>{ info.title }</h1>
+              <h2 className='book-author'>{ info.author }</h2>
+              <p className='book-description'>{ info.description }</p>
+            </article>
+          )
+        })
+      )
+    })
+
     return(
       <section>
 
@@ -53,18 +70,15 @@ export default class Main extends Component {
         <section className='bookshelf'>
           <article>
             <div>
-              {/* <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" /> */}
               <Button name='&#9733;' className='star-button' />
             </div>
-            <article className='info-container'>
-              <h1 className='book-title'>Title Test</h1>
-              <h2 className='book-author'>Author Test</h2>
-              <p className='book-description'>Description Test</p>
-            </article>
+            {/* <article className='info-container'> */}
+              {books}
+            {/* </article> */}
           </article>
         </section>
 
-        {/* <img src='./app/../images/150pxB.png' className='nyt-logo' /> */}
+        <img src={require('../../../images/150pxB.png')} className='nyt-logo' />
 
       </section>
     )
