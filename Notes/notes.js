@@ -29,19 +29,17 @@
 //VERIFIED
   //hardcover-fiction
   //hardcover-nonfiction
+  //young-adult-hardcover
+  //e-book-fiction
+  //e-book-nonfiction
+  //trade-fiction-paperback
+  //paperback-nonfiction
 
 //NONVERIFIED
-  //paperback-trade-fiction
-  //ebook-fiction
   //combined-print-ebook-fiction
-
-  //paperback-nonfiction
-  //ebook-nonfiction
   //combined-print-ebook-nonfiction
-
   //childrens-middle-grade-hardcover
   //childrens-picture-books
   //childrens-series
-  //young-adult-hardcover
 
   //advide-how-to-misc
