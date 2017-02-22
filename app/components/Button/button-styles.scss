@@ -26,13 +26,14 @@
 }
 
 .button-clicked {
-  background-color: magenta;
+  background-color: $listHover;
+  color: $darkColor;
 }
 
 .star-button {
-  margin: 3px 0 0 88%;
+  position: absolute;
   background-color: transparent;
-  font-size: 24px;
+  font-size: 32px;
   color: $lightColor;
   border: none;
   outline: none;

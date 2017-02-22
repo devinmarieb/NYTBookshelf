@@ -1,6 +1,13 @@
 export const addBooks = (books) => {
   return {
     type: 'ADD_BOOKS',
-    books
+      books
+      //   books.map((book)=> {
+      //   return(
+      //     book.book_details.map((info)=> {
+      //       return [info.title, info.author, info.description, info.primary_isbn13]
+      //     })
+      //   )
+      // })
   }
 }

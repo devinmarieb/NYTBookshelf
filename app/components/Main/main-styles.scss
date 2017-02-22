@@ -4,13 +4,9 @@ body {
   background-color: $lightColor;
 }
 
-.bookshelf {
-  display: flex;
-}
-
 .info-container {
-  width: 275px;
-  margin: 0 0 0 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .book-title {
@@ -33,14 +29,18 @@ body {
 
 .book-image {
   display: inline-block;
-  margin: 20px;
-  height: 450px;
-  width: 275px;
-  background-color: $darkColor;
-  color: $lightColor;
 }
 
 .nyt-logo {
-  display: block;
-  margin: 0 0 0 95%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.individual-book {
+  margin: 40px;
+}
+
+.info-text {
+  width: 375px;
 }

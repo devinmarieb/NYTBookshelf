@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
 
-import Button from '../Button/Button'
 import Header from '../Header/Header'
+import Button from '../Button/Button'
 
 import './main-styles.scss'
 
@@ -22,16 +22,44 @@ export default class Main extends Component {
       this.props.handleAPI(books)
       // console.log(books);
     })
-    //WIP change button color on click
-    // e.target.classList.toggle('button-clicked')
+    // this.toggleListTab()
+    // setTimeout(function(){ e.target.classList.add('button-clicked') }, 1000)
   }
 
-  render(){
-    // console.log(this.props.bookList);
+  // toggleListTab() {
+  //   debugger
+  //   let buttons = document.querySelectorAll('.button')
+  //   console.log(buttons);
+  // }
+
+  render() {
+    let allBooks = this.props.bookList
+    let books
+    if(allBooks)
+    books = allBooks.map((book)=> {
+      return (
+        book.book_details.map((info, i)=> {
+          return(
+            <article className='individual-book'>
+              <div className='book-image-container'>
+                <Button name='&#9733;' className='star-button' />
+                <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" className='book-image' />
+              </div>
+              <div className='info-text'>
+                <h1 className='book-title'>{ info.title }</h1>
+                <h2 className='book-author'>{ info.author }</h2>
+                <p className='book-description'>{ info.description }</p>
+              </div>
+            </article>
+          )
+        })
+      )
+    })
+
     return(
       <section>
 
-        <Header className='header' title='NYT Bookshelf' textClass='nyt-title'/>
+        <Header />
 
         <article className='button-container'>
           <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } />
@@ -44,20 +72,11 @@ export default class Main extends Component {
           <Button name='&#9733;' className='favorites-button' />
         </article>
 
-
         <section className='bookshelf'>
-          <article>
-            <div className='book-image'> <Button name='&#9733;' className='star-button' /> </div>
-            <article className='info-container'>
-              <h1 className='book-title'>Title Test</h1>
-              <h2 className='book-author'>Author Test</h2>
-              <p className='book-description'>Description Test</p>
-            </article>
+          <article className='info-container'>
+              {books}
           </article>
         </section>
-
-        <img src='./app/../images/150pxB.png' className='nyt-logo' />
-
       </section>
     )
   }

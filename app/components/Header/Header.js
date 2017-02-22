@@ -3,10 +3,11 @@ import React from 'react'
 import './header-styles.scss'
 
 
-const Header = (props) => {
+const Header = () => {
   return(
-    <section className={ props.className }>
-      <h1 className={ props.textClass }> { props.title } </h1>
+    <section className='header'>
+      <h1 className='nyt-title'> NYT Bookshelf </h1>
+      <img src={require('../../../images/65px.png')} className='nyt-logo' />
     </section>
   )
 }
