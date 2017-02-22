@@ -40,11 +40,16 @@ export default class Main extends Component {
       return (
         book.book_details.map((info, i)=> {
           return(
-            <article>
-              {/* <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" /> */}
-              <h1 className='book-title'>{ info.title }</h1>
-              <h2 className='book-author'>{ info.author }</h2>
-              <p className='book-description'>{ info.description }</p>
+            <article className='individual-book'>
+              <div className='book-image-container'>
+                <Button name='&#9733;' className='star-button' />
+                <img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" className='book-image' />
+              </div>
+              <div className='info-text'>
+                <h1 className='book-title'>{ info.title }</h1>
+                <h2 className='book-author'>{ info.author }</h2>
+                <p className='book-description'>{ info.description }</p>
+              </div>
             </article>
           )
         })
@@ -68,18 +73,10 @@ export default class Main extends Component {
         </article>
 
         <section className='bookshelf'>
-          <article>
-            <div>
-              <Button name='&#9733;' className='star-button' />
-            </div>
-            {/* <article className='info-container'> */}
+          <article className='info-container'>
               {books}
-            {/* </article> */}
           </article>
         </section>
-
-        <img src={require('../../../images/150pxB.png')} className='nyt-logo' />
-
       </section>
     )
   }
