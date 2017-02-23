@@ -22,15 +22,27 @@ export default class Main extends Component {
       this.props.handleAPI(books)
       // console.log(books);
     })
-    // this.toggleListTab()
-    // setTimeout(function(){ e.target.classList.add('button-clicked') }, 1000)
+    this.toggleListTab()
+    e.target.classList.add('button-clicked')
   }
 
-  // toggleListTab() {
-  //   debugger
-  //   let buttons = document.querySelectorAll('.button')
-  //   console.log(buttons);
-  // }
+  toggleListTab() {
+    let button = document.querySelectorAll('.button')
+    var i
+    for(i = 0; i < button.length; i++) {
+      button[i].classList.remove('button-clicked')
+    }
+  }
+
+  checkImageSrc(isbn) {
+    let image = <img src={`http://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`} />
+    if(image) {
+      return (<img src={`http://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`} />)
+    } else {
+      return (<img src={require('../../../images/nobook.png')} />)
+    }
+
+  }
 
   render() {
     let allBooks = this.props.bookList
@@ -42,14 +54,15 @@ export default class Main extends Component {
           return(
             <article className='individual-book'>
               <div className='book-image-container'>
-                <Button name='&#9733;' className='star-button' />
-                <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} />
+                <Button name='&#9733;' className='star-button' onClick={()=> console.log('click')} />
+                {this.checkImageSrc(info.primary_isbn13)}
+                {/* <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} />
+                <img src={require('../../../images/nobook.png')} /> */}
               </div>
               <div className='info-text'>
                 <h1 className='book-title'>{ info.title }</h1>
                 <h2 className='book-author'>{ info.author }</h2>
                 <p className='book-description'>{ info.description }</p>
-                <p>{ info.primary_isbn10 }</p>
               </div>
             </article>
           )

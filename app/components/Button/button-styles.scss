@@ -22,7 +22,7 @@
 
 .favorites-button:hover {
   background-color: $favoritesHover;
-  color: $darkColor;
+  color: $darkGold;
 }
 
 .button-clicked {
@@ -32,13 +32,15 @@
 
 .star-button {
   position: absolute;
-  background-color: transparent;
-  font-size: 32px;
+  font-size: 26px;
+  width: 50px;
   color: $lightColor;
   border: none;
   outline: none;
+  background: -webkit-linear-gradient(left, $darkColor , transparent);
 }
 
 .star-button:hover {
   color: $favoritesHover;
+  background: -webkit-linear-gradient(left, $darkGold, transparent);
 }

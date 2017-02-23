@@ -7,15 +7,18 @@ body {
 .info-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .book-title {
+  margin-top: 30px;
   font-family: $bookTitleFont;
   font-size: 32px;
   color: $darkColor;
 }
 
 .book-author {
+  margin-top: 10px;
   font-family: $bookInfoFont;
   font-size: 24px;
   color: $darkColor;
