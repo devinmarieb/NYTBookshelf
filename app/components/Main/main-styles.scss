@@ -33,7 +33,8 @@ body {
 .book-image-container {
   width: 300px;
   height: 470px;
-  background-image: url(('../../../images/nobook.png'));
+  background-image: url('../../../images/nobook.png');
+  background-size: cover;
 }
 
 .book-image {
@@ -53,4 +54,17 @@ body {
 
 .info-text {
   width: 375px;
+}
+
+.amazon-url {
+  display: block;
+  margin-top: -4px;
+  bottom: 0;
+  text-decoration: none;
+  color: $lightColor;
+  background: -webkit-linear-gradient(left, $darkColor , transparent);
+}
+
+.amazon-url:hover {
+  color: $favoritesHover;
 }
