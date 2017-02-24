@@ -60,7 +60,7 @@ export default class Main extends Component {
             <article className='individual-book'>
               <div className='book-image-container'>
                 <Button name='&#9733;' className='star-button' onClick={()=> console.log('click')} />
-                <a href={book.amazon_product_url}><img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image' /></a>
+                <a href={book.amazon_product_url} target='_blank'><img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image'/></a>
               </div>
               <div className='info-text'>
                 <h1 className='book-title'>{ info.title }</h1>
