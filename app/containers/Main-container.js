@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addBooks } from '../actions'
-import Bookshelf from '../components/Bookshelf/Bookshelf'
+import Main from '../components/Main/Main'
 
 const mapStateToProps = (state) => {
   // console.log(state);
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Bookshelf)
+export default connect(mapStateToProps, mapDispatchToProps)(Main)

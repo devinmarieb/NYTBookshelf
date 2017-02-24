@@ -43,3 +43,11 @@
   //     // }
   //   // }
   // }
+
+  //   books.map((book)=> {
+  //   return(
+  //     book.book_details.map((info)=> {
+  //       return [info.title, info.author, info.description, info.primary_isbn13]
+  //     })
+  //   )
+  // })

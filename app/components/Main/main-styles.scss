@@ -1,0 +1,56 @@
+@import './app/variables';
+
+body {
+  background-color: $lightColor;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-title {
+  margin-top: 30px;
+  font-family: $bookTitleFont;
+  font-size: 32px;
+  color: $darkColor;
+}
+
+.book-author {
+  margin-top: 10px;
+  font-family: $bookInfoFont;
+  font-size: 24px;
+  color: $darkColor;
+}
+
+.book-description {
+  font-family: $bookInfoFont;
+  font-size: 18px;
+  color: $darkColor;
+}
+
+.book-image-container {
+  width: 300px;
+  height: 470px;
+  background-image: url(('../../../images/nobook.png'));
+}
+
+.book-image {
+  width: 300px;
+  height: 470px;
+}
+
+.nyt-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.individual-book {
+  margin: 40px;
+}
+
+.info-text {
+  width: 375px;
+}
