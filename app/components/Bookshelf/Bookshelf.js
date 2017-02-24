@@ -4,7 +4,7 @@ import $ from 'jquery'
 import Header from '../Header/Header'
 import Button from '../Button/Button'
 
-import './bookshelf-styles.scss'
+// import './bookshelf-styles.scss'
 
 
 export default class Bookshelf extends Component {

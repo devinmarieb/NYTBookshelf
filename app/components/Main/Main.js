@@ -64,29 +64,14 @@ export default class Main extends Component {
         <Header />
 
         <article className='button-container'>
-          <Link to='/hardcover-fiction'>
-            <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } />
-          </Link>
-          <Link to='/paperback-fiction'>
-            <Button name='Paperback Fiction' className='button' onClick={ (e)=> this.updateList('trade-fiction-paperback', e) } />
-          </Link>
-          <Link to='/ebook-fiction'>
-            <Button name='E-Book Fiction' className='button' onClick={ (e)=> this.updateList('e-book-fiction', e) } />
-          </Link>
-          <Link to='/hardcover-nonfiction'>
-            <Button name='Hardcover NonFiction' className='button' onClick={ (e)=> this.updateList('hardcover-nonfiction', e) } />
-          </Link>
-          <Link to='/paperback-nonfiction'>
-            <Button name='Paperback NonFiction' className='button' onClick={ (e)=> this.updateList('paperback-nonfiction', e) } />
-          </Link>
-          <Link to='/ebook-nonfiction'>
-            <Button name='E-Book NonFiction' className='button' onClick={ (e)=> this.updateList('e-book-nonfiction', e) } />
-          </Link>
-          <Link to='/young-adult-hardcover'>
-            <Button name='Young Adult Hardcover' className='button' onClick={ (e)=> this.updateList('young-adult-hardcover', e) } />
-          </Link>
-          {/* Link to Favorites component */}
-          <Button name='&#9733;' className='favorites-button' />
+          <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } link='hardcover-fiction' />
+          <Button name='Paperback Fiction' className='button'  onClick={ (e)=> this.updateList('trade-fiction-paperback', e) } link='paperback-fiction' />
+          <Button name='E-Book Fiction' className='button' onClick={ (e)=> this.updateList('e-book-fiction', e) } link='ebook-fiction' />
+          <Button name='Hardcover NonFiction' className='button' onClick={ (e)=> this.updateList('hardcover-nonfiction', e) } link='hardcover-nonfiction' />
+          <Button name='Paperback NonFiction' className='button' onClick={ (e)=> this.updateList('paperback-nonfiction', e) } link='paperback-nonfiction' />
+          <Button name='E-Book NonFiction' className='button' onClick={ (e)=> this.updateList('e-book-nonfiction', e) } link='ebook-nonfiction' />
+          <Button name='Young Adult Hardcover' className='button' onClick={ (e)=> this.updateList('young-adult-hardcover', e) } link='young-adult-hardcover' />
+            <Button name='&#9733;' className='favorites-button' link='favorites' />
         </article>
 
         <section className='bookshelf'>

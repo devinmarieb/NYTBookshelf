@@ -5,9 +5,13 @@
   flex-direction: row;
 }
 
+.link {
+  @include buttonStyle;
+  height: 75px;
+}
+
 .button {
   @include buttonStyle;
-  font-size: 12px;
 }
 
 .favorites-button {
