@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import Main from './containers/Main-container'
-import Bookshelf from './containers/Bookshelf-container'
+import Bookshelf from './components/Bookshelf/Bookshelf'
 
 import allReducers from './reducers/index'
 
@@ -17,9 +17,8 @@ import './reset.css'
 const router = (
   <Provider store={store}>
     <Router history={ browserHistory }>
-      <Route path='/' component={ Main }>
-        <Route path='/:list' component={ Bookshelf } />
-      </Route>
+      <Route path='/' component={ Main } />
+      <Route path='/favorites' component={ Bookshelf } />
     </Router>
   </Provider>
 )

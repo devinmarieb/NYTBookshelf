@@ -7,7 +7,7 @@ body {
 .info-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .book-title {
@@ -53,16 +53,19 @@ body {
 }
 
 .info-text {
-  width: 375px;
+  width: 300px;
 }
 
 .amazon-url {
   display: block;
   margin-top: -4px;
-  bottom: 0;
+  padding: 3px;
   text-decoration: none;
   color: $lightColor;
   background: -webkit-linear-gradient(left, $darkColor , transparent);
+  font-family: $bookTitleFont;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .amazon-url:hover {
