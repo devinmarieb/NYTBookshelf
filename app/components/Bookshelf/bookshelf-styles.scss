@@ -30,8 +30,15 @@ body {
   color: $darkColor;
 }
 
+.book-image-container {
+  width: 300px;
+  height: 470px;
+  background-image: url(('../../../images/nobook.png'));
+}
+
 .book-image {
-  display: inline-block;
+  width: 300px;
+  height: 470px;
 }
 
 .nyt-logo {

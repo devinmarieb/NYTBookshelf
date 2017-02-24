@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import mainReducer from './main-reducer'
+import bookshelfReducer from './bookshelf-reducer'
 
 
 const allReducers = combineReducers({
-  mainReducer,
+  bookshelfReducer,
 })
 
 

@@ -4,7 +4,7 @@ import { Router, Route, Link, IndexRoute, browserHistory, IndexRedirect } from '
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import Main from './containers/Main-container'
+import Bookshelf from './containers/Bookshelf-container'
 
 import allReducers from './reducers/index'
 
@@ -16,7 +16,7 @@ import './reset.css'
 const router = (
   <Provider store={store}>
     <Router history={ browserHistory }>
-      <Route path='/' component={ Main }>
+      <Route path='/' component={ Bookshelf }>
       </Route>
     </Router>
   </Provider>

@@ -4,7 +4,7 @@ import $ from 'jquery'
 import Header from '../Header/Header'
 import Button from '../Button/Button'
 
-import './main-styles.scss'
+import './bookshelf-styles.scss'
 
 
 export default class Main extends Component {
@@ -20,7 +20,6 @@ export default class Main extends Component {
     }).then((result) => {
       let books = result.results
       this.props.handleAPI(books)
-      // console.log(books);
     })
     this.toggleListTab()
     e.target.classList.add('button-clicked')
@@ -34,16 +33,6 @@ export default class Main extends Component {
     }
   }
 
-  checkImageSrc(isbn) {
-    let image = <img src={`http://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`} />
-    if(image) {
-      return (<img src={`http://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`} />)
-    } else {
-      return (<img src={require('../../../images/nobook.png')} />)
-    }
-
-  }
-
   render() {
     let allBooks = this.props.bookList
     let books
@@ -55,9 +44,7 @@ export default class Main extends Component {
             <article className='individual-book'>
               <div className='book-image-container'>
                 <Button name='&#9733;' className='star-button' onClick={()=> console.log('click')} />
-                {this.checkImageSrc(info.primary_isbn13)}
-                {/* <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} />
-                <img src={require('../../../images/nobook.png')} /> */}
+                <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image' />
               </div>
               <div className='info-text'>
                 <h1 className='book-title'>{ info.title }</h1>
