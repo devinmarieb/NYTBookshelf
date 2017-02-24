@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import $ from 'jquery'
 
 import Header from '../Header/Header'
@@ -54,12 +54,13 @@ export default class Main extends Component {
     if(allBooks)
     books = allBooks.map((book)=> {
       return (
+        book.amazon_product_url,
         book.book_details.map((info, i)=> {
           return(
             <article className='individual-book'>
               <div className='book-image-container'>
                 <Button name='&#9733;' className='star-button' onClick={()=> console.log('click')} />
-                <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image' />
+                <a href={book.amazon_product_url}><img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image' /></a>
               </div>
               <div className='info-text'>
                 <h1 className='book-title'>{ info.title }</h1>
@@ -74,9 +75,7 @@ export default class Main extends Component {
 
     return(
       <section>
-
         <Header />
-
         <article className='button-container'>
           <Button name='Hardcover Fiction' className='button button-clicked' onClick={ (e)=> this.updateList('hardcover-fiction', e) } link='hardcover-fiction' />
           <Button name='Paperback Fiction' className='button'  onClick={ (e)=> this.updateList('trade-fiction-paperback', e) } link='paperback-fiction' />
@@ -85,12 +84,11 @@ export default class Main extends Component {
           <Button name='Paperback NonFiction' className='button' onClick={ (e)=> this.updateList('paperback-nonfiction', e) } link='paperback-nonfiction' />
           <Button name='E-Book NonFiction' className='button' onClick={ (e)=> this.updateList('e-book-nonfiction', e) } link='ebook-nonfiction' />
           <Button name='Young Adult Hardcover' className='button' onClick={ (e)=> this.updateList('young-adult-hardcover', e) } link='young-adult-hardcover' />
-            <Button name='&#9733;' className='favorites-button' link='favorites' />
+          <Button name='&#9733;' className='favorites-button' link='favorites' />
         </article>
-
         <section className='bookshelf'>
           <article className='info-container'>
-              {books}
+            {books}
           </article>
         </section>
       </section>
