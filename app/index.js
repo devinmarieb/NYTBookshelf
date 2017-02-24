@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import Main from './containers/Main-container'
-import Bookshelf from './components/Bookshelf/Bookshelf'
+import Favorites from './components/Favorites/Favorites'
 
 import allReducers from './reducers/index'
 
@@ -18,7 +18,7 @@ const router = (
   <Provider store={store}>
     <Router history={ browserHistory }>
       <Route path='/' component={ Main } />
-      <Route path='/favorites' component={ Bookshelf } />
+      <Route path='/favorites' component={ Favorites } />
     </Router>
   </Provider>
 )

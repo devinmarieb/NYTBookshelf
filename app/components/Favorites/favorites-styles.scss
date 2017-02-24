@@ -1,0 +1,15 @@
+@import './app/variables';
+
+
+.favorites-info {
+  padding: 30px 100px;
+  font-family: $bookInfoFont;
+  font-size: 18px;
+  text-align: center;
+  background-color: $favoritesHover;
+  color: $darkColor;
+}
+
+.back:hover, .update:hover {
+  background-color: $listHover;
+}
