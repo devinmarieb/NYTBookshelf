@@ -10,6 +10,20 @@ import './main-styles.scss'
 
 export default class Main extends Component {
 
+  componentDidMount() {
+    let bookListRequest =('https://api.nytimes.com/svc/books/v3/lists.json')
+    bookListRequest += '?' + $.param({
+      'api-key': "d7d1e070d64347eda225f068e97c8d21",
+      'list': 'hardcover-fiction'
+    })
+    fetch(bookListRequest).then((result) => {
+      return result.json()
+    }).then((result) => {
+      let books = result.results
+      this.props.handleAPI(books)
+    })
+  }
+
   updateList(list, e) {
     let bookListRequest =('https://api.nytimes.com/svc/books/v3/lists.json')
     bookListRequest += '?' + $.param({
@@ -64,7 +78,7 @@ export default class Main extends Component {
         <Header />
 
         <article className='button-container'>
-          <Button name='Hardcover Fiction' className='button' onClick={ (e)=> this.updateList('hardcover-fiction', e) } link='hardcover-fiction' />
+          <Button name='Hardcover Fiction' className='button button-clicked' onClick={ (e)=> this.updateList('hardcover-fiction', e) } link='hardcover-fiction' />
           <Button name='Paperback Fiction' className='button'  onClick={ (e)=> this.updateList('trade-fiction-paperback', e) } link='paperback-fiction' />
           <Button name='E-Book Fiction' className='button' onClick={ (e)=> this.updateList('e-book-fiction', e) } link='ebook-fiction' />
           <Button name='Hardcover NonFiction' className='button' onClick={ (e)=> this.updateList('hardcover-nonfiction', e) } link='hardcover-nonfiction' />
