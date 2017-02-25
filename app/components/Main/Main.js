@@ -9,6 +9,12 @@ import './main-styles.scss'
 
 
 export default class Main extends Component {
+  constructor() {
+    super()
+      this.state = {
+        favArray: []
+      }
+  }
 
   componentDidMount() {
     let bookListRequest =('https://api.nytimes.com/svc/books/v3/lists.json')
@@ -48,6 +54,13 @@ export default class Main extends Component {
     }
   }
 
+  toggleFavorite (book) {
+    let nArr = this.state.favArray
+    !nArr.includes(book) ? nArr.push(book) : nArr.splice(book, 1);
+    this.setState({favArray: nArr})
+    return this.state.favArray
+  }
+
   render() {
     let allBooks = this.props.bookList
     let books
@@ -59,7 +72,7 @@ export default class Main extends Component {
           return(
             <article className='individual-book'>
               <div className='book-image-container'>
-                <Button name='&#9733;' className='star-button' onClick={()=> console.log('click')} />
+                <Button name='&#9733;' className='star-button' onClick={ ()=> this.props.handleFavorites(this.toggleFavorite(book)) } />
                 <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image'/>
                 <a href={book.amazon_product_url} target='_blank' className='amazon-url'>Find on Amazon</a>
               </div>

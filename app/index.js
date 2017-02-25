@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import Main from './containers/Main-container'
-import Favorites from './components/Favorites/Favorites'
+import Favorites from './containers/Favorites-container'
 
 import allReducers from './reducers/index'
 
@@ -15,7 +15,7 @@ const store = createStore(allReducers, devTools)
 import './reset.css'
 
 const router = (
-  <Provider store={store}>
+  <Provider store={ store }>
     <Router history={ browserHistory }>
       <Route path='/' component={ Main } />
       <Route path='/favorites' component={ Favorites } />

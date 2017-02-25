@@ -1,7 +1,9 @@
 const mainReducer = (state = {}, action) => {
   switch(action.type) {
     case 'ADD_BOOKS':
-      return Object.assign({}, state, { books: action.books })
+      return Object.assign({}, state, { books: action.books });
+    case 'ADD_FAVORITES':
+      return Object.assign({}, state, { favorites: action.favorites })
   }
   return state
 }
