@@ -5,9 +5,9 @@ export const addBooks = (books) => {
   }
 }
 
-export const saveFavorites = (favorites) => {
+export const saveFavorites = (favorite) => {
   return {
     type: 'ADD_FAVORITES',
-    favorites
+    favorite
   }
 }
