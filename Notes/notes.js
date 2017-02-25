@@ -1,6 +1,18 @@
+let favorites = 
+
+
 //SELENIUM WEBDRIVER
   //all prices seem to have a class of '.a-color-price'
 
+
+  // let fav = action.favorite
+  //   state.favorites.map((fav, i)=> {
+  //     if(state.favorites[i].amazon_product_url === fav.amazon_product_url) {
+  //       state.favorites.splice(state.favorites.indexOf(fav), 1)
+  //      } else {
+  //        state.favorites.push(fav)
+  //      }
+  //   })
 
 
 //THERE SHOULD BE 11 BOOK CATEGORIES

@@ -3,9 +3,7 @@ const mainReducer = (state = {books: [], favorites: []}, action) => {
     case 'ADD_BOOKS':
       return Object.assign({}, state, { books: action.books });
     case 'ADD_FAVORITES':
-    console.log('favorite', action.favorite, 'favarray', state.favorites);
       return Object.assign({}, state, { favorites: [ ...state.favorites, action.favorite] })
-    // !state.favorites.includes(action.favorite) ? state.favorites.push(action.favorite) : state.favorites.splice(action.favorite, 1)
   }
   return state
 }

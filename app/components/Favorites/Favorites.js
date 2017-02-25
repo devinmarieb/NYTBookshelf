@@ -7,7 +7,7 @@ import './favorites-styles.scss'
 
 export default class Favorites extends Component {
   render() {
-    let favoriteBooks = this.props.favorites
+    let favoriteBooks = JSON.parse(localStorage.getItem('userFavList'))
     let favorites
     if(favoriteBooks)
     favorites = favoriteBooks.map((favorite)=> {

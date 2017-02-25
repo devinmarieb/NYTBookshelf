@@ -5,7 +5,7 @@ import Main from '../components/Main/Main'
 import Favorites from '../components/Favorites/Favorites'
 
 const mapStateToProps = (state) => {
-  // console.log(state);
+  localStorage.setItem('userFavList', JSON.stringify(state.mainReducer.favorites))
   return ({ bookList: state.mainReducer.books, favorites: state.mainReducer.favorite })
 }
 
