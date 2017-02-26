@@ -7,7 +7,7 @@ import './favorites-styles.scss'
 
 export default class Favorites extends Component {
 
-  deletedFav(favorite) {
+  deletedFav(favorite, e) {
     let newStorage = this.props.favorites.splice(this.props.favorites.indexOf(favorite), 1)
     localStorage.setItem('userFavList', JSON.stringify(newStorage))
   }
@@ -24,7 +24,7 @@ export default class Favorites extends Component {
           return(
             <article className='individual-book'>
               <div className='book-image-container'>
-                <Button name='&#10006;' className='delete-button' onClick={ ()=> this.props.handleDelete(this.deletedFav(favorite)) } />
+                <Button name='&#10006;' className='delete-button' onClick={ (e)=> this.props.handleDelete(this.deletedFav(favorite), e) } />
                 <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image'/>
                 <a href={favorite.amazon_product_url} target='_blank' className='amazon-url'>Find on Amazon</a>
               </div>
