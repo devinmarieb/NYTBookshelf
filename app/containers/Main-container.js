@@ -4,9 +4,11 @@ import { addBooks, saveFavorites } from '../actions'
 import Main from '../components/Main/Main'
 import Favorites from '../components/Favorites/Favorites'
 
+let favoriteArray = JSON.parse(localStorage.getItem('userfavList'))
+
 const mapStateToProps = (state) => {
-  localStorage.setItem('userFavList', JSON.stringify(state.mainReducer.favorites))
-  return ({ bookList: state.mainReducer.books, favorites: state.mainReducer.favorite })
+  let favs = localStorage.setItem('userFavList', JSON.stringify(state.mainReducer.favorites))
+  return ({ bookList: state.mainReducer.books, favorites: favs })
 }
 
 const mapDispatchToProps = (dispatch) => {

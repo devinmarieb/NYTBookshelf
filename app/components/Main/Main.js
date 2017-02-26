@@ -9,12 +9,6 @@ import './main-styles.scss'
 
 
 export default class Main extends Component {
-  // constructor() {
-  //   super()
-  //     this.state = {
-  //       favArray: []
-  //     }
-  // }
 
   componentDidMount() {
     let bookListRequest =('https://api.nytimes.com/svc/books/v3/lists.json')
@@ -53,13 +47,6 @@ export default class Main extends Component {
       button[i].classList.remove('button-clicked')
     }
   }
-
-  // toggleFavorite (book) {
-  //   let nArr = this.state.favArray
-  //   !nArr.includes(book) ? nArr.push(book) : nArr.splice(book, 1);
-  //   this.setState({favArray: nArr})
-  //   return this.state.favArray
-  // }
 
   render() {
     let allBooks = this.props.bookList

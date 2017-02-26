@@ -1,10 +1,21 @@
-const mainReducer = (state = {books: [], favorites: []}, action) => {
+let favoriteArray = JSON.parse(localStorage.getItem('userfavList'))
+favoriteArray === null ?  favoriteArray = [] : favoriteArray = favoriteArray
+
+const mainReducer = (state = {books: [], favorites: favoriteArray}, action) => {
   switch(action.type) {
     case 'ADD_BOOKS':
       return Object.assign({}, state, { books: action.books });
+
     case 'ADD_FAVORITES':
-      return Object.assign({}, state, { favorites: [ ...state.favorites, action.favorite] })
+      let bookStatus = true
+      state.favorites.map((favorite)=> {
+        if(favorite.amazon_product_url === action.favorite.amazon_product_url) {
+          bookStatus = false;
+        }
+      })
+      return bookStatus ? Object.assign({}, state, { favorites: [ ...state.favorites, action.favorite] }) : console.log('hi');
   }
+
   return state
 }
 
