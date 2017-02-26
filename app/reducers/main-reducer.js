@@ -14,7 +14,7 @@ const mainReducer = (state = {books: [], favorites: favoriteArray}, action) => {
           state.favorites.splice(state.favorites.indexOf(favorite), 1)
         }
       })
-      return bookStatus ? Object.assign({}, state, { favorites: [ ...state.favorites, action.favorite] }) : console.log('hi');
+      return bookStatus ? Object.assign({}, state, { favorites: [ ...state.favorites, action.favorite] }) : state
   }
 
   return state
