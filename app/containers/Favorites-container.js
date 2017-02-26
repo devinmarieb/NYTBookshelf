@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { deleteFavorite } from '../actions'
 import Favorites from '../components/Favorites/Favorites'
 
 const mapStateToProps = (state) => {
   return { favorites: state.mainReducer.favorites}
 }
 
-export default connect(mapStateToProps)(Favorites)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleDelete: (deletedFav, e) => {
+      dispatch(deleteFavorite(deletedFav, e))
+  }
+}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites)

@@ -19,3 +19,18 @@
 .back:hover, .update:hover {
   background-color: $listHover;
 }
+
+.delete-button {
+  position: absolute;
+  font-size: 26px;
+  width: 50px;
+  color: $lightColor;
+  border: none;
+  outline: none;
+  background: -webkit-linear-gradient(left, $darkColor , transparent);
+}
+
+.delete-button:hover {
+  color: #e50000;
+  background: -webkit-linear-gradient(left, #660000, transparent);
+}

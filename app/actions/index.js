@@ -11,3 +11,10 @@ export const saveFavorites = (favorite) => {
     favorite
   }
 }
+
+export const deleteFavorite = (deletedFav, e) => {
+  return {
+    type: 'DELETE_FAVORITE',
+    deletedFav
+  }
+}
