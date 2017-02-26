@@ -11,6 +11,7 @@ const mainReducer = (state = {books: [], favorites: favoriteArray}, action) => {
       state.favorites.map((favorite)=> {
         if(favorite.amazon_product_url === action.favorite.amazon_product_url) {
           bookStatus = false;
+          state.favorites.splice(state.favorites.indexOf(favorite), 1)
         }
       })
       return bookStatus ? Object.assign({}, state, { favorites: [ ...state.favorites, action.favorite] }) : console.log('hi');
