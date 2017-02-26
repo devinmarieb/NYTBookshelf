@@ -59,7 +59,7 @@ export default class Main extends Component {
           return(
             <article className='individual-book'>
               <div className='book-image-container'>
-                <Button name='&#9733;' className='star-button' onClick={ ()=> this.props.handleFavorites(book) } />
+                <Button name='&#9733;' className='star-button' onClick={ (e)=> this.props.handleFavorites(book, e) } />
                 <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image'/>
                 <a href={book.amazon_product_url} target='_blank' className='amazon-url'>Find on Amazon</a>
               </div>

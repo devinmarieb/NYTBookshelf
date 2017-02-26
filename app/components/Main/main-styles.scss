@@ -71,3 +71,8 @@ body {
 .amazon-url:hover {
   color: $favoritesHover;
 }
+
+.clicked-favorite {
+  color: $favoritesHover;
+  background: -webkit-linear-gradient(left, $darkGold, transparent);
+}
