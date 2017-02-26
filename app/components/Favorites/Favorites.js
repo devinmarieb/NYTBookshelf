@@ -45,7 +45,9 @@ export default class Favorites extends Component {
           If the price of one of your favorite books has dropped, the color will change from
           gold to green! <br></br> If you'd like to manually check for updates, click the Update Prices button above.
         </h1>
-        {favorites}
+        <article className='info-container'>
+          {favorites}
+        </article>
       </section>
     )
   }

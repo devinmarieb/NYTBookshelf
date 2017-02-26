@@ -1,5 +1,10 @@
 @import './app/variables';
 
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .favorites-info {
   line-height: 120%;

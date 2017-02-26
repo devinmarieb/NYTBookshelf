@@ -14,7 +14,6 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(addBooks(books))
     },
     handleFavorites: (favorite, e) => {
-      debugger
       dispatch(saveFavorites(favorite))
       if(e.target.classList.contains('clicked-favorite')) {
         e.target.classList.remove('clicked-favorite')

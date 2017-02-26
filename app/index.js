@@ -18,6 +18,13 @@ const router = (
   <Provider store={ store }>
     <Router history={ browserHistory }>
       <Route path='/' component={ Main } />
+      <Route path='/hardcover-fiction' component={ Main } />
+      <Route path='/paperback-fiction' component={ Main } />
+      <Route path='/ebook-fiction' component={ Main } />
+      <Route path='/hardcover-nonfiction' component={ Main } />
+      <Route path='/paperback-nonfiction' component={ Main } />
+      <Route path='/ebook-nonfiction' component={ Main } />
+      <Route path='/young-adult-hardcover' component={ Main } />
       <Route path='/favorites' component={ Favorites } />
     </Router>
   </Provider>
