@@ -49,7 +49,7 @@ export default class Main extends Component {
   }
 
   render() {
-    // console.log('all', this.props.bookList, 'favs', this.props.favorites);
+    console.log('all', this.props.bookList, 'favs', this.props.favorites);
     let allBooks = this.props.bookList
     let books
     if(allBooks)

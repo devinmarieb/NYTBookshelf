@@ -1,0 +1,33 @@
+// import React from 'react'
+// import { expect, assert } from 'chai'
+// import { shallow, mount } from 'enzyme'
+// import { combineReducers } from 'redux'
+//
+// import allReducers from './index.js'
+// import mainReducer from './main-reducer'
+// import favoritesReducer from './favorites-reducer'
+//
+// let mockStorage = global.window = { localStorage: ['bookOne', 'bookTwo'] }
+//
+// // describe('mainReducer', ()=> {
+// //
+// //   it('should be a function', ()=> {
+// //     assert.isFunction(mainReducer)
+// //   })
+// //
+// // })
+
+
+// defaultApiBooks = {
+//   bookTitle: 'Book Title',
+//   bookAuthor: 'Book Author',
+//   bookDescription: 'Book Description'
+// }
+//
+//
+// // Main.prototype.componentWillMount = () => {
+// //   jest.mock(defaultAPIBooks)
+// // }
+
+
+//const path = require('path')
