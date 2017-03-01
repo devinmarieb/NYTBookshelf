@@ -11,8 +11,8 @@ describe('actions', ()=> {
     expect(actions.addBooks(stubBook)).toEqual(expectedReturn)
   })
 
-  it.skip('should have an action that lets a user add a favorite', ()=> {
-    const expedtedReturn = {
+  it('should have an action that lets a user add a favorite', ()=> {
+    const expectedReturn = {
       type: 'ADD_FAVORITES',
       favorite: stubBook
     }

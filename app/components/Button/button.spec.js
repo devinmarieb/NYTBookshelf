@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { expect, assert } from 'chai'
 import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
+import Main, { updateList } from '../Main/Main'
 
 import Button from './Button'
 
@@ -11,7 +12,17 @@ describe('Button', ()=> {
 
   it('renders a link to surround every button', ()=> {
     const wrapper = shallow(<Button />)
-    expect(wrapper.find(<Link />)).to.have.length(1)
+    expect(wrapper.find('Link')).to.have.length(1)
+  })
+
+  it('Link should have a passed in prop for to', ()=> {
+    const wrapper = mount(<Link to='/favorites' />)
+    expect(wrapper.props().to).to.equal('/favorites')
+  })
+
+  it('Link should have a passed in prop for className', ()=> {
+    const wrapper = mount(<Link className='link' />)
+    expect(wrapper.props().className).to.equal('link')
   })
 
   it('renders one button element', ()=> {
@@ -24,16 +35,16 @@ describe('Button', ()=> {
     expect(wrapper.props().className).to.equal('button')
   })
 
-  it('should have a prop passed in for onClick', ()=> {
-    const wrapper = mount(<Button onClick='handleClick' />)
-    expect(wrapper.props().onClick).to.equal('handleClick')
+  it('navbar button should have passed in prop for handleClick', () => {
+    const wrapper = shallow(<Button handleClick={updateList} />)
+    expect(wrapper.props().handleClick).to.equal(updateList)
   })
 
-  it('should handle onClick', ()=> {
+  it('should handle a click event', ()=> {
     const handleClick = sinon.spy()
-    const wrapper = mount(<Button onClick={ handleClick } />)
+    const wrapper = mount(<button className='button' onClick={handleClick} />)
     expect(handleClick.calledOnce).to.equal(false)
-    wrapper.find('.log-in').simulate('click')
+    wrapper.find('.button').simulate('click')
     expect(handleClick.calledOnce).to.equal(true)
   })
 

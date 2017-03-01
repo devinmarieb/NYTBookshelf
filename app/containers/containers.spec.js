@@ -15,7 +15,7 @@ describe('mapStateToProps', ()=> {
 
 describe('mapDispatchToProps', ()=> {
 
-  it('should be a function'. ()=> {
+  it('should be a function', ()=> {
     assert.isFunction(mapDispatchToProps)
   })
 
