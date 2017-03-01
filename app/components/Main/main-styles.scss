@@ -72,16 +72,6 @@ body {
   color: $favoritesHover;
 }
 
-.clicked-favorite {
-  position: absolute;
-  font-size: 26px;
-  width: 50px;
-  color: $favoritesHover;
-  border: none;
-  outline: none;
-  background: -webkit-linear-gradient(left, $darkGold, transparent);
-}
-
 .star-button {
   position: absolute;
   font-size: 26px;
@@ -90,6 +80,16 @@ body {
   border: none;
   outline: none;
   background: -webkit-linear-gradient(left, $darkColor , transparent);
+}
+
+.clicked-favorite {
+  position: absolute;
+  font-size: 26px;
+  width: 50px;
+  color: $favoritesHover;
+  border: none;
+  outline: none;
+  background: -webkit-linear-gradient(left, $darkGold, transparent);
 }
 
 .star-button:hover {

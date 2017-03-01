@@ -51,9 +51,9 @@ export default class Main extends Component {
 
   checkFavs(allBooks, favBooks, bookIsbn) {
     if(allBooks.length > 0 && !Array.isArray(bookIsbn)) {
-      for(let k = 0; k < favBooks.length; k++) {
-        for(let i = 0; i < allBooks.length; i++) {
-          if(allBooks[i].book_details[0].primary_isbn13 && favBooks[k].book_details[0].primary_isbn13 === bookIsbn) {
+      for(let k = 0; k < allBooks.length; k++) {
+        for(let i = 0; i < favBooks.length; i++) {
+          if(allBooks[k].book_details[0].primary_isbn13 && favBooks[i].book_details[0].primary_isbn13 === bookIsbn) {
             return 'clicked-favorite'
           } else {
             return 'star-button'
@@ -62,24 +62,6 @@ export default class Main extends Component {
       }
     }
   }
-
-  // checkFavs(allBooks, favBooks, bookIsbn) {
-  //   if(allBooks.length > 0 && !Array.isArray(bookIsbn)) {
-  //     for(let i = 0; i < allBooks.length; i++){
-  //       if(favBooks[i].book_details[0].primary_isbn13 === bookIsbn) {
-  //         for(let k = 0; k < allBooks.length; k++) {
-  //           if(allBooks[k].book_details[0].primary_isbn13 === bookIsbn) {
-  //             return 'clicked-favorite'
-  //           }
-  //           if(allBooks[k].book_details[0].primary_isbn13 != bookIsbn) {
-  //             return 'star-button'
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
 
   render() {
     const allBooks = this.props.bookList
@@ -111,7 +93,6 @@ export default class Main extends Component {
 
     return(
       <section>
-        {/* {this.checkFavs(allBooks, favBooks)} */}
         <Header />
         <article className='button-container'>
           <Button name='Hardcover Fiction' className='button button-clicked' onClick={ (e)=> this.updateList('hardcover-fiction', e) } link='hardcover-fiction' />
