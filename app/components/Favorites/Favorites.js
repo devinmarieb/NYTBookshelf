@@ -13,7 +13,6 @@ export default class Favorites extends Component {
   }
 
   render() {
-    // console.log("favs", this.props.favorites);
     let favorites
     let favoriteBooks = this.props.favorites
     if(favoriteBooks)

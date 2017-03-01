@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router';
+import ReactDOM from 'react-dom'
+import { Link } from 'react-router'
 import $ from 'jquery'
 
 import Header from '../Header/Header'
@@ -48,24 +49,37 @@ export default class Main extends Component {
     }
   }
 
-  checkFavs(allBooks, favBooks) {
-    if(allBooks.length > 0) {
-      for(let k = 0; k < favBooks.length; k++) {
-        for(let i = 0; i < allBooks.length; i++) {
-          if(allBooks[i].amazon_product_url === favBooks[k].amazon_product_url) {
-            console.log(allBooks[i].amazon_product_url)
+  checkFavs(allBooks, favBooks, bookIsbn) {
+    if(allBooks.length > 0 && !Array.isArray(bookIsbn)) {
+      for(let i = 0; i < favBooks.length; i++){
+        if(favBooks[i].book_details[0].primary_isbn13 === bookIsbn) {
+          for(let k = 0; k < allBooks.length; k++) {
+            if(allBooks[k].book_details[0].primary_isbn13 === bookIsbn) {
+              return 'star-button clicked-favorite'
+            }
           }
         }
       }
+      // for(let k = 0; k < favBooks.length; k++) {
+      //   for(let i = 0; i < allBooks.length; i++) {
+      //     // console.log('books array', allBooks[i].book_details[0].primary_isbn13, 'favs array', bookIsbn);
+      //     if(allBooks[i].book_details[0].primary_isbn13 === bookIsbn) {
+      //       return 'star-button clicked-favorite'
+      //     } else {
+      //       return  'star-button'
+      //     }
+      //   }
+      // }
     }
   }
 
+
   render() {
-    let allBooks = this.props.bookList
-    let favBooks = this.props.favorites
+    const allBooks = this.props.bookList
+    const favBooks = this.props.favorites
     let books
     if(allBooks.length > 0)
-    this.checkFavs(allBooks, favBooks )
+    // this.checkFavs(allBooks, favBooks)
     books = allBooks.map((book)=> {
       return (
         book.amazon_product_url,
@@ -73,7 +87,7 @@ export default class Main extends Component {
           return(
             <article className='individual-book'>
               <div className='book-image-container'>
-                <Button name='&#9733;' className='star-button' onClick={ (e)=> this.props.handleFavorites(book, e) } />
+                <Button name='&#9733;' className={this.checkFavs(allBooks, favBooks, info.primary_isbn13)} onClick={ (e)=> this.props.handleFavorites(book, e) } />
                 <img src={`http://covers.openlibrary.org/b/isbn/${info.primary_isbn13}-L.jpg`} className='book-image'/>
                 <a href={book.amazon_product_url} target='_blank' className='amazon-url'>Find on Amazon</a>
               </div>
@@ -90,6 +104,7 @@ export default class Main extends Component {
 
     return(
       <section>
+        {/* {this.checkFavs(allBooks, favBooks)} */}
         <Header />
         <article className='button-container'>
           <Button name='Hardcover Fiction' className='button button-clicked' onClick={ (e)=> this.updateList('hardcover-fiction', e) } link='hardcover-fiction' />
