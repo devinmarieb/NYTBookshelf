@@ -18,6 +18,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(saveFavorites(favorite))
       if(e.target.classList.contains('clicked-favorite')) {
         e.target.classList.remove('clicked-favorite')
+        e.target.classList.add('star-button')
       } else {
         e.target.classList.add('clicked-favorite')
       }

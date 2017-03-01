@@ -73,7 +73,12 @@ body {
 }
 
 .clicked-favorite {
+  position: absolute;
+  font-size: 26px;
+  width: 50px;
   color: $favoritesHover;
+  border: none;
+  outline: none;
   background: -webkit-linear-gradient(left, $darkGold, transparent);
 }
 

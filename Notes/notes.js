@@ -1,4 +1,4 @@
-let favorites = 
+let favorites =
 
 
 //SELENIUM WEBDRIVER
@@ -55,4 +55,16 @@ let favorites =
   //       }
   //     // }
   //   // }
+  // }
+
+
+  // for(let k = 0; k < favBooks.length; k++) {
+  //   for(let i = 0; i < allBooks.length; i++) {
+  //     // console.log('books array', allBooks[i].book_details[0].primary_isbn13, 'favs array', bookIsbn);
+  //     if(allBooks[i].book_details[0].primary_isbn13 === bookIsbn) {
+  //       return 'star-button clicked-favorite'
+  //     } else {
+  //       return  'star-button'
+  //     }
+  //   }
   // }
