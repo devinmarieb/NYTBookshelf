@@ -48,11 +48,24 @@ export default class Main extends Component {
     }
   }
 
+  checkFavs(allBooks, favBooks) {
+    if(allBooks.length > 0) {
+      for(let k = 0; k < favBooks.length; k++) {
+        for(let i = 0; i < allBooks.length; i++) {
+          if(allBooks[i].amazon_product_url === favBooks[k].amazon_product_url) {
+            console.log(allBooks[i].amazon_product_url)
+          }
+        }
+      }
+    }
+  }
+
   render() {
-    console.log('all', this.props.bookList, 'favs', this.props.favorites);
     let allBooks = this.props.bookList
+    let favBooks = this.props.favorites
     let books
-    if(allBooks)
+    if(allBooks.length > 0)
+    this.checkFavs(allBooks, favBooks )
     books = allBooks.map((book)=> {
       return (
         book.amazon_product_url,
