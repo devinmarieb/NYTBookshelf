@@ -10,7 +10,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleDelete: (deletedFav, e) => {
-      console.log(e);
       dispatch(deleteFavorite(deletedFav, e))
         e.target.classList.add('clicked-delete')
     }

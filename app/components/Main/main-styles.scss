@@ -1,98 +1,110 @@
-// @import './app/variables';
-//
-// body {
-//   background-color: $lightColor;
-// }
-//
-// .info-container {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-// }
-//
-// .book-title {
-//   margin-top: 30px;
-//   font-family: $bookTitleFont;
-//   font-size: 32px;
-//   color: $darkColor;
-// }
-//
-// .book-author {
-//   margin-top: 10px;
-//   font-family: $bookInfoFont;
-//   font-size: 24px;
-//   color: $darkColor;
-// }
-//
-// .book-description {
-//   font-family: $bookInfoFont;
-//   font-size: 18px;
-//   color: $darkColor;
-// }
-//
-// .book-image-container {
-//   width: 300px;
-//   height: 470px;
-//   background-image: url('../../../images/nobook.png');
-//   background-size: cover;
-// }
-//
-// .book-image {
-//   width: 300px;
-//   height: 470px;
-// }
-//
-// .nyt-logo {
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
-// }
-//
-// .individual-book {
-//   margin: 40px;
-// }
-//
-// .info-text {
-//   width: 300px;
-// }
-//
-// .amazon-url {
-//   display: block;
-//   margin-top: -4px;
-//   padding: 3px;
-//   text-decoration: none;
-//   color: $lightColor;
-//   background: -webkit-linear-gradient(left, $darkColor , transparent);
-//   font-family: $bookTitleFont;
-//   font-size: 12px;
-//   letter-spacing: 1px;
-// }
-//
-// .amazon-url:hover {
-//   color: $favoritesHover;
-// }
-//
-// .star-button {
-//   position: absolute;
-//   font-size: 26px;
-//   width: 50px;
-//   color: $lightColor;
-//   border: none;
-//   outline: none;
-//   background: -webkit-linear-gradient(left, $darkColor , transparent);
-// }
-//
-// .clicked-favorite {
-//   position: absolute;
-//   font-size: 26px;
-//   width: 50px;
-//   color: $favoritesHover;
-//   border: none;
-//   outline: none;
-//   background: -webkit-linear-gradient(left, $darkGold, transparent);
-// }
-//
-// .star-button:hover {
-//   color: $favoritesHover;
-//   background: -webkit-linear-gradient(left, $darkGold, transparent);
-// }
+@import './app/variables';
+
+
+body {
+  background-color: $lightColor;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book-title {
+  margin-top: 30px;
+  font-family: $bookTitleFont;
+  font-size: 32px;
+  color: $darkColor;
+}
+
+.book-author {
+  margin-top: 10px;
+  font-family: $bookInfoFont;
+  font-size: 24px;
+  color: $darkColor;
+}
+
+.book-description {
+  font-family: $bookInfoFont;
+  font-size: 18px;
+  color: $darkColor;
+}
+
+.book-image-container {
+  width: 300px;
+  height: 470px;
+  background-image: url('../../../images/nobook.png');
+  background-size: cover;
+}
+
+.book-image {
+  width: 300px;
+  height: 470px;
+}
+
+.nyt-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.individual-book {
+  margin: 40px;
+}
+
+.info-text {
+  width: 300px;
+}
+
+.amazon-url {
+  display: block;
+  margin-top: -4px;
+  padding: 3px;
+  text-decoration: none;
+  color: $lightColor;
+  background: -webkit-linear-gradient(left, $darkColor , transparent);
+  font-family: $bookTitleFont;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.amazon-url:hover {
+  color: $favoritesHover;
+}
+
+.star-button {
+  position: absolute;
+  font-size: 26px;
+  width: 50px;
+  color: $lightColor;
+  border: none;
+  outline: none;
+  background: -webkit-linear-gradient(left, $darkColor , transparent);
+}
+
+.clicked-favorite {
+  position: absolute;
+  font-size: 26px;
+  width: 50px;
+  color: $favoritesHover;
+  border: none;
+  outline: none;
+  background: -webkit-linear-gradient(left, $darkGold, transparent);
+}
+
+.star-button:hover {
+  color: $favoritesHover;
+  background: -webkit-linear-gradient(left, $darkGold, transparent);
+}
+
+@media screen and (max-width: 800px) {
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.link {
+    width: 25%;
+  }
+}

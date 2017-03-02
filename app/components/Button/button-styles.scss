@@ -1,35 +1,35 @@
-// @import './app/variables';
-//
-// .button-container {
-//   display: flex;
-//   flex-direction: row;
-// }
-//
-// .link {
-//   @include buttonStyle;
-//   height: 75px;
-// }
-//
-// .button {
-//   @include buttonStyle;
-// }
-//
-// .favorites-button {
-//   @include buttonStyle;
-//   font-size: 24px;
-// }
-//
-// .button:hover {
-//   background-color: #ff8484;
-//   color: $darkColor;
-// }
-//
-// .favorites-button:hover {
-//   background-color: $favoritesHover;
-//   color: $darkGold;
-// }
-//
-// .button-clicked {
-//   background-color: $listHover;
-//   color: $darkColor;
-// }
+@import './app/variables';
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.link {
+  @include buttonStyle;
+  height: 75px;
+}
+
+.button {
+  @include buttonStyle;
+}
+
+.favorites-button {
+  @include buttonStyle;
+  font-size: 24px;
+}
+
+.button:hover {
+  background-color: #ff8484;
+  color: $darkColor;
+}
+
+.favorites-button:hover {
+  background-color: $favoritesHover;
+  color: $darkGold;
+}
+
+.button-clicked {
+  background-color: $listHover;
+  color: $darkColor;
+}

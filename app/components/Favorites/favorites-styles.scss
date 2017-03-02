@@ -1,41 +1,41 @@
-// @import './app/variables';
-//
-// .info-container {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-// }
-//
-// .favorites-info {
-//   line-height: 120%;
-//   padding: 20px 75px;
-//   font-family: $bookInfoFont;
-//   font-size: 18px;
-//   text-align: center;
-//   background-color: $favoritesHover;
-//   color: $darkColor;
-// }
-//
-// .back:hover, .update:hover {
-//   background-color: $listHover;
-// }
-//
-// .delete-button {
-//   position: absolute;
-//   font-size: 26px;
-//   width: 50px;
-//   color: $lightColor;
-//   border: none;
-//   outline: none;
-//   background: -webkit-linear-gradient(left, $darkColor , transparent);
-// }
-//
-// .delete-button:hover {
-//   color: #e50000;
-//   background: -webkit-linear-gradient(left, #660000, transparent);
-// }
-//
-// .clicked-delete {
-//   color: #e50000;
-//   background: -webkit-linear-gradient(left, #660000, transparent);
-// }
+@import './app/variables';
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.favorites-info {
+  line-height: 120%;
+  padding: 20px 75px;
+  font-family: $bookInfoFont;
+  font-size: 18px;
+  text-align: center;
+  background-color: $favoritesHover;
+  color: $darkColor;
+}
+
+.back:hover, .update:hover {
+  background-color: $listHover;
+}
+
+.delete-button {
+  position: absolute;
+  font-size: 26px;
+  width: 50px;
+  color: $lightColor;
+  border: none;
+  outline: none;
+  background: -webkit-linear-gradient(left, $darkColor , transparent);
+}
+
+.delete-button:hover {
+  color: #e50000;
+  background: -webkit-linear-gradient(left, #660000, transparent);
+}
+
+.clicked-delete {
+  color: #e50000;
+  background: -webkit-linear-gradient(left, #660000, transparent);
+}
