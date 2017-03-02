@@ -17,7 +17,7 @@ Currently a user can select one of the popular NYT Bestseller lists and view the
 ##### What is on fire/what are you having trouble with?
 
 ### Screen Shots of Current State Of App  
-[Imgur](http://i.imgur.com/ikY0RFh.png)
+![](http://i.imgur.com/ikY0RFh.png)
 
 ## Installation and Setup Instructions
 
