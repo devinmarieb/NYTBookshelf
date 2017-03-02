@@ -68,7 +68,6 @@ export default class Main extends Component {
     const favBooks = this.props.favorites
     let books
     if(allBooks.length > 0)
-    // this.checkFavs(allBooks, favBooks)
     books = allBooks.map((book)=> {
       return (
         book.amazon_product_url,
@@ -114,3 +113,10 @@ export default class Main extends Component {
   }
 
 }
+
+  Main.propTypes = {
+    className: React.PropTypes.string,
+    onClick: React.PropTypes.func,
+    name: React.PropTypes.string,
+    link: React.PropTypes.string
+  }

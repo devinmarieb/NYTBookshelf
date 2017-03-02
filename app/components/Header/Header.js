@@ -12,5 +12,9 @@ const Header = () => {
   )
 }
 
+Header.propTypes = {
+  className: React.PropTypes.string,
+}
+
 
 export default Header;

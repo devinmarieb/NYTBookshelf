@@ -58,3 +58,9 @@ export default class Favorites extends Component {
   }
 
 }
+
+Favorites.propTypes = {
+  onClick: React.PropTypes.func,
+  name: React.PropTypes.string,
+  className: React.PropTypes.string
+}

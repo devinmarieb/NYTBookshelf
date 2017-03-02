@@ -12,5 +12,12 @@ const Button = (props) => {
   )
 }
 
+Button.propTypes = {
+  onClick: React.PropTypes.func,
+  name: React.PropTypes.string,
+  link: React.PropTypes.string,
+  className: React.PropTypes.string
+}
+
 
 export default Button;
