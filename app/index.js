@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import Main from './containers/Main-container'
+import Favorites from './containers/Favorites-container'
 
 import allReducers from './reducers/index'
 
@@ -14,10 +15,17 @@ const store = createStore(allReducers, devTools)
 import './reset.css'
 
 const router = (
-  <Provider store={store}>
+  <Provider store={ store }>
     <Router history={ browserHistory }>
-      <Route path='/' component={ Main }>
-      </Route>
+      <Route path='/' component={ Main } />
+      <Route path='/hardcover-fiction' component={ Main } />
+      <Route path='/paperback-fiction' component={ Main } />
+      <Route path='/ebook-fiction' component={ Main } />
+      <Route path='/hardcover-nonfiction' component={ Main } />
+      <Route path='/paperback-nonfiction' component={ Main } />
+      <Route path='/ebook-nonfiction' component={ Main } />
+      <Route path='/young-adult-hardcover' component={ Main } />
+      <Route path='/favorites' component={ Favorites } />
     </Router>
   </Provider>
 )

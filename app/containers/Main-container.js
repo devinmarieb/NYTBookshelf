@@ -1,19 +1,29 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addBooks } from '../actions'
+import { addBooks, saveFavorites, checkFavorites } from '../actions'
 import Main from '../components/Main/Main'
+import Favorites from '../components/Favorites/Favorites'
 
 const mapStateToProps = (state) => {
-  // console.log(state);
-  return { bookList: state.mainReducer.books }
+  localStorage.setItem('userFavList', JSON.stringify(state.mainReducer.favorites))
+  return ({ bookList: state.mainReducer.books, favorites: JSON.parse(localStorage.getItem('userFavList'))})
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
+  return ({
     handleAPI: (books) => {
       dispatch(addBooks(books))
+    },
+    handleFavorites: (favorite, e) => {
+      dispatch(saveFavorites(favorite))
+      if(e.target.classList.contains('clicked-favorite')) {
+        e.target.classList.remove('clicked-favorite')
+        e.target.classList.add('star-button')
+      } else {
+        e.target.classList.add('clicked-favorite')
+      }
     }
-  }
+  })
 }
 
 

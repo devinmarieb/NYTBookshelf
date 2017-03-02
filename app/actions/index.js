@@ -2,12 +2,19 @@ export const addBooks = (books) => {
   return {
     type: 'ADD_BOOKS',
       books
-      //   books.map((book)=> {
-      //   return(
-      //     book.book_details.map((info)=> {
-      //       return [info.title, info.author, info.description, info.primary_isbn13]
-      //     })
-      //   )
-      // })
+  }
+}
+
+export const saveFavorites = (favorite) => {
+  return {
+    type: 'ADD_FAVORITES',
+    favorite
+  }
+}
+
+export const deleteFavorite = (deletedFav, e) => {
+  return {
+    type: 'DELETE_FAVORITE',
+    deletedFav
   }
 }

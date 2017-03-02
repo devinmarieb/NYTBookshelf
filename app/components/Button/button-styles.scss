@@ -5,9 +5,13 @@
   flex-direction: row;
 }
 
+.link {
+  @include buttonStyle;
+  height: 75px;
+}
+
 .button {
   @include buttonStyle;
-  font-size: 12px;
 }
 
 .favorites-button {
@@ -16,29 +20,16 @@
 }
 
 .button:hover {
-  background-color: $listHover;
+  background-color: #ff8484;
   color: $darkColor;
 }
 
 .favorites-button:hover {
   background-color: $favoritesHover;
-  color: $darkColor;
+  color: $darkGold;
 }
 
 .button-clicked {
   background-color: $listHover;
   color: $darkColor;
-}
-
-.star-button {
-  position: absolute;
-  background-color: transparent;
-  font-size: 32px;
-  color: $lightColor;
-  border: none;
-  outline: none;
-}
-
-.star-button:hover {
-  color: $favoritesHover;
 }
