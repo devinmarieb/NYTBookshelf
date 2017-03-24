@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, IndexRoute, browserHistory, IndexRedirect } from 'react-router'
+import { Router, Route, Link, IndexRoute, hashHistory, IndexRedirect } from 'react-router'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
@@ -16,7 +16,7 @@ import './reset.css'
 
 const router = (
   <Provider store={ store }>
-    <Router history={ browserHistory }>
+    <Router history={ hashHistory }>
       <Route path='/' component={ Main } />
       <Route path='/hardcover-fiction' component={ Main } />
       <Route path='/paperback-fiction' component={ Main } />
