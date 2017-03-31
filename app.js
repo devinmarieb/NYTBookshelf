@@ -3,4 +3,4 @@ const Server = require('./server.js')
 const app = Server.app()
 
 app.listen(process.env.PORT || 5000)
-console.log(`Listening at http://localhost:${port}`)
+// console.log(`Listening at http://localhost:${port}`)
