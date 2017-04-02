@@ -43,13 +43,7 @@ export default class Favorites extends Component {
         <Header />
         <article className='button-container'>
           <Button name='Back to NYT Bestseller Lists' className='button back' link='/' />
-          <Button name='Update Prices' className='button update' />
         </article>
-        <h1 className='favorites-info'>
-          We will look at the prices of all your favorite books every midinight.
-          If the price of one of your favorite books has dropped, the color will change from
-          gold to green! <br></br> If you'd like to manually check for updates, click the Update Prices button above.
-        </h1>
         <article className='info-container'>
           {favorites}
         </article>
