@@ -21,6 +21,8 @@ Currently a user can select one of the popular NYT Bestseller lists and view the
 
 ## Installation and Setup Instructions
 
+Deployed App: https://nytbookshelfprjct.herokuapp.com/
+
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
 Installation:
